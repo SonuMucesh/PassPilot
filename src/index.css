@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 198 54% 97%;
+    --foreground: 212 42% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 212 42% 14%;
+    --primary: 203 92% 27%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 42 52% 88%;
+    --secondary-foreground: 211 40% 20%;
+    --muted: 203 48% 92%;
+    --muted-foreground: 210 20% 42%;
+    --accent: 12 94% 70%;
+    --accent-foreground: 211 48% 15%;
+    --border: 202 38% 84%;
+    --input: 202 38% 82%;
+    --ring: 202 92% 35%;
+  }
+
+  .dark {
+    --background: 216 58% 8%;
+    --foreground: 199 44% 94%;
+    --card: 215 48% 12%;
+    --card-foreground: 199 44% 94%;
+    --primary: 197 87% 58%;
+    --primary-foreground: 215 61% 9%;
+    --secondary: 217 41% 18%;
+    --secondary-foreground: 199 44% 94%;
+    --muted: 217 37% 17%;
+    --muted-foreground: 205 23% 74%;
+    --accent: 12 94% 70%;
+    --accent-foreground: 215 61% 9%;
+    --border: 214 35% 22%;
+    --input: 214 34% 24%;
+    --ring: 197 87% 58%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    min-width: 320px;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    background: rgba(255, 126, 103, 0.32);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .app-shell {
+    background:
+      linear-gradient(180deg, hsl(var(--background)) 0%, #f7fbfc 28%, #fbf4e9 63%, hsl(var(--background)) 100%);
+  }
+
+  .dark .app-shell {
+    background:
+      linear-gradient(180deg, hsl(var(--background)) 0%, #07182c 42%, #061323 100%);
+  }
+
+  .hero-sea::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 46%;
+    background:
+      repeating-linear-gradient(
+        168deg,
+        rgba(255, 255, 255, 0.16) 0 1px,
+        transparent 1px 22px
+      );
+    opacity: 0.36;
+    pointer-events: none;
+  }
+
+  .sea-contours {
+    background:
+      repeating-radial-gradient(
+        ellipse at 26% 36%,
+        rgba(255, 255, 255, 0.28) 0 1px,
+        transparent 1px 18px
+      ),
+      repeating-linear-gradient(
+        110deg,
+        rgba(255, 255, 255, 0.1) 0 1px,
+        transparent 1px 26px
+      );
+  }
+
+  .sunset-ridge {
+    background:
+      linear-gradient(180deg, transparent 0%, rgba(255, 126, 103, 0.22) 42%, rgba(250, 243, 226, 0.38) 100%);
+  }
+
+  .route-map-surface {
+    background:
+      linear-gradient(120deg, rgba(239, 249, 255, 0.92), rgba(255, 255, 255, 0.9) 45%, rgba(255, 245, 231, 0.94)),
+      repeating-linear-gradient(
+        135deg,
+        rgba(0, 75, 122, 0.07) 0 1px,
+        transparent 1px 18px
+      );
+  }
+
+  .dark .route-map-surface {
+    background:
+      linear-gradient(120deg, rgba(8, 39, 70, 0.9), rgba(3, 18, 37, 0.9) 48%, rgba(11, 63, 95, 0.82)),
+      repeating-linear-gradient(
+        135deg,
+        rgba(125, 211, 252, 0.1) 0 1px,
+        transparent 1px 18px
+      );
+  }
+
+  .brand-wordmark {
+    font-family: "Sail", Georgia, Cambria, serif !important;
+    text-shadow:
+      0 3px 0 rgba(3, 18, 37, 0.18),
+      0 18px 45px rgba(3, 18, 37, 0.22);
+    font-synthesis: none;
+  }
+
+  .dark .brand-wordmark {
+    text-shadow:
+      0 3px 0 rgba(125, 211, 252, 0.14),
+      0 20px 55px rgba(0, 0, 0, 0.4);
+  }
+}
