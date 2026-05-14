@@ -23,8 +23,12 @@ To publish:
 
 1. Push the project to a GitHub repository.
 2. In GitHub, open `Settings -> Pages`.
-3. Set `Build and deployment` to `GitHub Actions`.
+3. Under `Build and deployment`, set `Source` to `GitHub Actions`.
 4. Push to the `main` branch.
+
+If the workflow fails at `actions/configure-pages@v5` with `Get Pages site failed`,
+Pages has not been enabled for the repo yet. Complete step 3 above, then rerun the
+failed workflow from the `Actions` tab.
 
 Vite is configured with `base: "./"` so the built app works on GitHub Pages project URLs like:
 
