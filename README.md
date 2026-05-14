@@ -4,12 +4,6 @@ PassPilot is a polished ferry and travel-pass calculator for Greek island hoppin
 
 This project was vibe-coded with Codex: fast product exploration, UI iteration, and shipping polish in one flow.
 
-## Screenshots
-
-![PassPilot desktop screenshot](docs/screenshots/passpilot-desktop.png)
-
-<img src="docs/screenshots/passpilot-mobile.png" alt="PassPilot mobile screenshot" width="320" />
-
 ## What It Does
 
 - Builds an editable ferry itinerary with port autocomplete
