@@ -26,3 +26,5 @@ Thumbs.db
 # Tool caches
 .vite/
 coverage/
+.edge-profile/
+.edge-profile-mobile/
